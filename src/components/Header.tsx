@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, BookOpen, Users, Video, FileText, Target, Info, MessageCircle } from 'lucide-react';
 
@@ -7,12 +8,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Info Kedinasan', href: '#info', icon: Info },
-    { name: 'Blog', href: '#blog', icon: FileText },
-    { name: 'Database Soal', href: '#soal', icon: BookOpen },
-    { name: 'Video Pembelajaran', href: '#video', icon: Video },
-    { name: 'Tryout', href: '#tryout', icon: Target },
-    { name: 'About Us', href: '#about', icon: Users },
+    { name: 'Info Kedinasan', href: '/info-kedinasan', icon: Info },
+    { name: 'Blog', href: '/blog', icon: FileText },
+    { name: 'Database Soal', href: '/database-soal', icon: BookOpen },
+    { name: 'Video Pembelajaran', href: '/video-pembelajaran', icon: Video },
+    { name: 'Tryout', href: '/tryout', icon: Target },
+    { name: 'About Us', href: '/about', icon: Users },
   ];
 
   return (
@@ -20,7 +21,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-speedu-blue to-speedu-green rounded-lg flex items-center justify-center">
               <BookOpen className="w-5 h-5 text-white" />
             </div>
@@ -28,19 +29,19 @@ const Header = () => {
               <h1 className="text-xl font-bold text-gray-900">Speedu</h1>
               <p className="text-xs text-speedu-blue font-medium">ngebut belajar</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-speedu-blue hover:bg-speedu-gray-light transition-all duration-200"
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -66,15 +67,15 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in">
             <nav className="flex flex-col space-y-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-speedu-blue hover:bg-speedu-gray-light transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
-                </a>
+                </Link>
               ))}
               <Button className="mt-4 bg-gradient-to-r from-speedu-blue to-speedu-green text-white">
                 <MessageCircle className="w-4 h-4 mr-2" />
