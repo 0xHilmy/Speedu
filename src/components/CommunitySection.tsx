@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import { 
   MessageCircle, 
   Users, 
@@ -45,12 +46,13 @@ const CommunitySection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-speedu-blue to-speedu-green relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-white/10" style={{
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
           backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%)',
-          backgroundSize: '30px 30px'
-        }}></div>
-      </div>
+          backgroundSize: '40px 40px'
+        }}
+      ></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -123,10 +125,12 @@ const CommunitySection = () => {
               Join thousands of successful candidates who chose Speedu as their learning partner
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-speedu-blue hover:bg-gray-100 font-semibold">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Join Community Now
-              </Button>
+              <Link to="/pricing">
+                <Button size="lg" className="bg-white text-speedu-blue hover:bg-gray-100 font-semibold">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Join Now
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-speedu-blue font-semibold">
                 Learn More
               </Button>

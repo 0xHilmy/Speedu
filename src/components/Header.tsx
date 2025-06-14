@@ -47,10 +47,12 @@ const Header = () => {
 
           {/* CTA Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <Button className="hidden md:flex bg-gradient-to-r from-speedu-blue to-speedu-green hover:from-speedu-blue-dark hover:to-speedu-green-dark text-white">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Join Community
-            </Button>
+            <Link to="/pricing">
+              <Button className="hidden md:flex bg-gradient-to-r from-speedu-blue to-speedu-green hover:from-speedu-blue-dark hover:to-speedu-green-dark text-white">
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Join Now
+              </Button>
+            </Link>
             
             {/* Mobile menu button */}
             <button
@@ -77,10 +79,12 @@ const Header = () => {
                   <span>{item.name}</span>
                 </Link>
               ))}
-              <Button className="mt-4 bg-gradient-to-r from-speedu-blue to-speedu-green text-white">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Join Community
-              </Button>
+              <Link to="/pricing">
+                <Button className="mt-4 bg-gradient-to-r from-speedu-blue to-speedu-green text-white">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Join Now
+                </Button>
+              </Link>
             </nav>
           </div>
         )}

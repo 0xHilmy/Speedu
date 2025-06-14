@@ -11,6 +11,7 @@ import DatabaseSoal from "./pages/DatabaseSoal";
 import VideoLearning from "./pages/VideoLearning";
 import Tryout from "./pages/Tryout";
 import About from "./pages/About";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/video-pembelajaran" element={<VideoLearning />} />
           <Route path="/tryout" element={<Tryout />} />
           <Route path="/about" element={<About />} />
+          <Route path="/pricing" element={<Pricing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
