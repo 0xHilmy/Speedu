@@ -41,7 +41,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <img src="/Logo.png" alt="Speedu Logo" className="w-20 h-20" />
+              <div className="w-10 h-10 bg-gradient-to-r from-speedu-blue to-speedu-green rounded-lg flex items-center justify-center">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
               <div>
                 <h3 className="text-2xl font-bold">Speedu</h3>
                 <p className="text-sm text-gray-400">ngebut belajar</p>

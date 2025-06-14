@@ -1,6 +1,7 @@
+
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { PlayCircle, BookOpen, Users, TrendingUp, MessageCircle } from 'lucide-react';
+import { PlayCircle, BookOpen, Users, TrendingUp } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -44,20 +45,14 @@ const HeroSection = () => {
                   Mulai Belajar Sekarang
                 </Button>
               </Link>
-              <a 
-                href="https://t.me/+mBWTt5xLnFJmY2Fl" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-speedu-blue font-semibold px-8 py-3 text-lg"
               >
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-speedu-blue font-semibold px-8 py-3 text-lg"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Join Telegram Group
-                </Button>
-              </a>
+                <PlayCircle className="w-5 h-5 mr-2" />
+                Tonton Demo
+              </Button>
             </div>
             
             {/* Stats */}
@@ -80,15 +75,14 @@ const HeroSection = () => {
           {/* Image/Illustration */}
           <div className="relative animate-scale-in">
             <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <video
-                src="/Untitled design (1).mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Pembelajaran Online"
                 className="w-full h-64 md:h-80 object-cover rounded-lg"
               />
-            
+              <div className="absolute -top-4 -right-4 bg-speedu-green text-white p-3 rounded-full shadow-lg">
+                <Users className="w-6 h-6" />
+              </div>
               <div className="absolute -bottom-4 -left-4 bg-white text-speedu-blue p-3 rounded-full shadow-lg">
                 <BookOpen className="w-6 h-6" />
               </div>
