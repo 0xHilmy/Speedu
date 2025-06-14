@@ -7,49 +7,49 @@ import { Target, Users, Award, Heart, Mail, Phone, MapPin } from 'lucide-react';
 const About = () => {
   const team = [
     {
-      name: 'Dr. Ahmad Supardi, M.Si',
+      name: 'Dwi Indra Prasetyo',
       position: 'Founder & CEO',
       education: 'S3 Administrasi Publik UI',
       experience: '15+ tahun di bidang kedinasan',
       specialization: 'Strategi pembelajaran dan pengembangan kurikulum',
       achievements: 'Mantan Kepala Bagian SDM Kementerian, Penulis 5 buku tentang ASN',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
+      image: '/Indro.JPG'
     },
     {
-      name: 'Prof. Dr. Sarah Wijaya, M.Psi',
+      name: 'Anas Taufiq',
       position: 'Head of Academic',
       education: 'S3 Psikologi Pendidikan UGM',
       experience: 'Mantan Dosen & Asesor BKN',
       specialization: 'Psikotes dan analisis kepribadian untuk SKB',
       achievements: 'Trainer resmi BKN, Konsultan psikologi 500+ instansi',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b72c5c95?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
+      image: '/Anas.JPG'
     },
     {
-      name: 'Drs. Budi Santoso, M.M',
+      name: 'Akhmad Rizal Wahid',
       position: 'Senior Instructor SKD',
       education: 'S2 Manajemen SDM Unpad',
       experience: '12+ tahun training ASN',
       specialization: 'TWK, TIU, dan TKP untuk berbagai formasi',
       achievements: 'Melatih 10.000+ peserta, Tingkat kelulusan 97%',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
+      image: '/Rizal.JPG'
     },
     {
-      name: 'Ir. Maya Kusuma, M.T',
+      name: 'M Dzaki Mufrih Rofi',
       position: 'Lead Instructor SKB',
       education: 'S2 Teknik Informatika ITB',
       experience: '10+ tahun sebagai PNS di Kemkominfo',
       specialization: 'SKB Teknis dan Manajerial berbagai bidang',
       achievements: 'Ahli sistem informasi pemerintahan, Instruktur bersertifikat',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
+      image: '/Dzaki.JPG'
     },
     {
-      name: 'Rizki Pratama, S.Kom',
+      name: 'Rizqi Faishal Hilmy',
       position: 'Head of Technology',
       education: 'S1 Ilmu Komputer UI',
       experience: '8+ tahun sebagai software engineer',
       specialization: 'Platform pembelajaran digital dan analisis data',
       achievements: 'Ex-Tech Lead di unicorn, Expert dalam EdTech innovation',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'
+      image: '/Hilmy.JPG'
     }
   ];
 
@@ -192,32 +192,35 @@ const About = () => {
             {team.map((member, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <div className="text-center mb-6">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-speedu-blue font-medium mb-3">{member.position}</p>
-                  </div>
-                  
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="font-medium text-gray-700">Pendidikan:</span>
-                      <p className="text-gray-600">{member.education}</p>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-1/2">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-[300px] object-cover"
+                      />
                     </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Pengalaman:</span>
-                      <p className="text-gray-600">{member.experience}</p>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Spesialisasi:</span>
-                      <p className="text-gray-600">{member.specialization}</p>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">Prestasi:</span>
-                      <p className="text-gray-600">{member.achievements}</p>
+                    <div className="md:w-1/2">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                      <p className="text-speedu-blue font-medium mb-3">{member.position}</p>
+                      <div className="space-y-3 text-sm">
+                        <div>
+                          <span className="font-medium text-gray-700">Pendidikan:</span>
+                          <p className="text-gray-600">{member.education}</p>
+                        </div>
+                        <div>
+                          <span className="font-medium text-gray-700">Pengalaman:</span>
+                          <p className="text-gray-600">{member.experience}</p>
+                        </div>
+                        <div>
+                          <span className="font-medium text-gray-700">Spesialisasi:</span>
+                          <p className="text-gray-600">{member.specialization}</p>
+                        </div>
+                        <div>
+                          <span className="font-medium text-gray-700">Prestasi:</span>
+                          <p className="text-gray-600">{member.achievements}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
