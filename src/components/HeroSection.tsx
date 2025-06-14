@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { PlayCircle, BookOpen, Users, TrendingUp } from 'lucide-react';
 
 const HeroSection = () => {
@@ -35,13 +36,15 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button 
-                size="lg" 
-                className="bg-white text-speedu-blue hover:bg-gray-100 font-semibold px-8 py-3 text-lg"
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                Mulai Belajar Sekarang
-              </Button>
+              <Link to="/video-pembelajaran">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-speedu-blue hover:bg-gray-100 font-semibold px-8 py-3 text-lg"
+                >
+                  <BookOpen className="w-5 h-5 mr-2" />
+                  Mulai Belajar Sekarang
+                </Button>
+              </Link>
               <Button 
                 size="lg" 
                 variant="outline" 

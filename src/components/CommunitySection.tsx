@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -16,21 +15,21 @@ const CommunitySection = () => {
   const testimonials = [
     {
       name: 'Sarah Putri',
-      role: 'Lolos CPNS Kemenkeu 2024',
+      role: 'Lolos CPNS Kemenkeu 2025',
       content: 'Speedu benar-benar membantu saya mempersiapkan tes SKD dan SKB. Soal-soalnya sangat mirip dengan tes asli!',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1494790108755-2616b72c5c95?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
     {
       name: 'Ahmad Rizki',
-      role: 'Lolos CPNS BPS 2024',
+      role: 'Lolos CPNS BPS 2025',
       content: 'Video pembelajaran di Speedu sangat mudah dipahami. Instrukturnya berpengalaman dan materinya lengkap.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
     {
       name: 'Indira Sari',
-      role: 'Lolos PPPK 2024',
+      role: 'Lolos PPPK 2025',
       content: 'Tryout di Speedu sangat membantu mengukur kemampuan. Ranking nasionalnya membuat saya lebih termotivasi!',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'

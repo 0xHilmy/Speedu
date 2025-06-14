@@ -14,7 +14,7 @@ const VideoLearning = () => {
       lessons: 24,
       rating: 4.9,
       students: 1250,
-      price: 'Rp 299.000',
+      package: 'Paket Premium',
       image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       level: 'Pemula - Menengah'
     },
@@ -25,7 +25,7 @@ const VideoLearning = () => {
       lessons: 30,
       rating: 4.8,
       students: 980,
-      price: 'Rp 399.000',
+      package: 'Paket Gold',
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       level: 'Menengah - Lanjut'
     },
@@ -36,7 +36,7 @@ const VideoLearning = () => {
       lessons: 16,
       rating: 4.9,
       students: 1100,
-      price: 'Rp 199.000',
+      package: 'Paket Basic',
       image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       level: 'Semua Level'
     }
@@ -163,7 +163,7 @@ const VideoLearning = () => {
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold text-speedu-blue">{course.price}</span>
+                    <span className="text-lg font-bold text-speedu-blue">{course.package}</span>
                     <Button>Daftar Sekarang</Button>
                   </div>
                 </CardContent>
